@@ -41,7 +41,7 @@ public class UserDaoImp implements UserDao {
         User u = show(id);
         u.setName(user.getName());
         u.setLast_name(user.getLast_name());
-        u.setLast_name(user.getEmail());
+        u.setEmail(user.getEmail());
         entityManager.persist(u);
     }
 

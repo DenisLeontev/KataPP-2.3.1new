@@ -54,8 +54,7 @@ public class UsersController {
 
     @PostMapping ("users")
     public String create(@ModelAttribute("user") User user) {
-        // параметры собираются сразу в модель User
-        userService.create(user);
+         userService.create(user);
         return "redirect:users";
     }
 
@@ -75,7 +74,7 @@ public class UsersController {
 
     //UPDATE
 
-    @GetMapping("(users/{id}/edit")
+    @GetMapping("users/{id}/edit")
     public String editForm(Model model, @PathVariable() long id) {
         model.addAttribute("user", userService.show(id));
         return "edit";
